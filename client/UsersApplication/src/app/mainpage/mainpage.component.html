@@ -1,0 +1,22 @@
+<!--Erez Goren Users Application 2022-->
+
+<!--Left side of the screen-->    
+
+<div class="leftDiv">
+
+        <h1 class="header"><i class="fi fi-br-mode-portrait"></i>  Users Application</h1>
+        <i class="fi fi-rr-search"></i> Search by Name: <input type="text" #txt (keyup)="search(txt.value)">
+        <a [routerLink]="['newUser']"><input type="button" value="Add New User" class="button"></a><i class="fi fi-rr-user-add"></i> <br><br>
+
+        <app-user [userData]="user" [searchUser]="search" [users1]="users" [filteresUsers1]="filteresUsers" *ngFor="let user of filteresUsers"></app-user><br>
+
+        <h3>Erez Goren  &copy;</h3>
+</div>
+
+<!--Right side of the screen--> 
+
+<div class="rightDiv">
+    
+    <router-outlet></router-outlet>
+
+</div>

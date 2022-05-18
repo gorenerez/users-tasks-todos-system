@@ -1,0 +1,34 @@
+.newUser {
+  background-color: #82954B;
+  border-width: 8px;
+  border-style: outset;
+  border-color: #BABD42;
+  width: 90%;
+  border-radius: 30px;
+  margin: auto;
+  text-align: center;
+}
+
+.button {
+  background-color: #31333110;
+  border: none;
+  color: rgb(133, 51, 51);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.button:hover {
+  background-color: #181a18;
+  color: white;
+}
+
+.h3header {
+  color: #82954B;
+  text-shadow: 2px 2px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}

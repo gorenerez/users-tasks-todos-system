@@ -1,0 +1,70 @@
+
+<!--Task list DIV-->
+
+<div class="tasksAndPostsView" *ngIf="addNewTaskButtonPushed">
+
+    <h3 class="h3header">Tasks</h3>
+        <div class="innerDiv">
+            <ul class="tasksList" *ngFor="let task of user.Tasks" style="text-align: left">
+                
+                <li><b>Title : </b>{{task.Title}}</li>
+                <li><b>Completed : </b>{{task.Completed}} <button value="true" *ngIf="!task.Completed" (click)="task.Completed=true; updateTaskCompleted()" class="button" style="padding: 6px 15px; font-size: 14px;"><i class="fi fi-rr-checkbox"></i></button></li>
+                
+            </ul>
+        </div>
+    <button (click)="addNewTaskButtonPushed=false" class="button"><i class="fi fi-rr-list-check"></i>  Add New Task</button><br><br>
+
+</div>
+
+
+<!--Add new task DIV-->
+
+<div class="tasksAndPostsView" *ngIf="!addNewTaskButtonPushed">
+
+    <h3 class="h3header">Add New Task</h3>
+            <form #f="ngForm" (ngSubmit)="addNewTask(); addNewTaskButtonPushed=true ">
+
+                    <b>Title : </b><input type="text" #tasktitle (keyup)="titleTask=tasktitle.value"><br><br>
+                    
+                    <button type="submit" class="button"><i class="fi fi-rr-plus"></i></button>
+                    <button (click)="addNewTaskButtonPushed=true" class="button"><i class="fi fi-rr-cross"></i></button><br><br>
+                    
+            </form>
+</div>  
+
+<br><h2 class="userName"><i class="fi fi-sr-user"></i>  {{user.Name}}</h2>
+
+<!--Post list DIV-->
+
+<div class="tasksAndPostsView" *ngIf="addNewPostButtonPushed">
+
+    <h3 class="h3header">Posts</h3>
+        <div class="innerDiv">
+                <ul *ngFor="let post of user.Posts" style="text-align: left">
+                    <li><b>Title : </b>{{post.Title}}</li>
+                    <li><b>Body : </b>{{post.Body}}</li>
+                </ul>
+        </div>
+    <button (click)="addNewPostButtonPushed=false" class="button"><i class="fi fi-rr-edit"></i>  Add New Post</button><br><br>
+
+</div>        
+
+
+<!--Add new post list DIV-->
+
+<div class="tasksAndPostsView" *ngIf="!addNewPostButtonPushed">
+
+    <h3 class="h3header">Add New Post</h3>
+
+    <form #f="ngForm" (ngSubmit)="addNewPost(); addNewPostButtonPushed=true">
+
+            <b>Title : </b><input type="text" #posttitle (keyup)="titlePost=posttitle.value"><br><br>
+            <b>Body : </b><input type="text" #postbody (keyup)="bodyPost=postbody.value"><br><br>
+            
+            <button type="submit" class="button"><i class="fi fi-rr-plus"></i></button>
+            <button (click)="addNewPostButtonPushed=true" class="button"><i class="fi fi-rr-cross"></i></button><br><br>
+
+    </form>
+
+</div>  
+

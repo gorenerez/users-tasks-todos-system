@@ -1,0 +1,28 @@
+<div [style.border-color]="userTaskCompleted?'lime' : 'IndianRed'" [style.background-color]="isChecked? '#BABD42' : '#EFD345'" class="user">
+
+            <form #f="ngForm" (ngSubmit)="update()">
+
+                <!--User Form with more data open as DIV-->
+
+                <a [routerLink]="['tasksAndPostsView', userData._id]" (click)="isChecked=true">User Tasks & Posts  <i class="fi fi-rr-redo"></i></a> <br><br>
+                Name : <input type="text" name="Name" [(ngModel)]="userData.Name"><br><br>
+                Email : <input type="text" name="Email" [(ngModel)]="userData.Email"><br><br>
+                
+                    <div class="otherDataPlusOtherDataForm">
+                            <div (click)="getMoreInputs=false" (mouseover)="getMoreInputs=true" class="otherDataClick">
+                                <i class="fi fi-rs-add"></i>     Other Data 
+                            </div><br>
+
+                            <div *ngIf="getMoreInputs" class="otherDataForm">
+                                Street : <input type="text" name="Street"  [(ngModel)]="userData.Street"><br><br>
+                                City : <input type="text" name="City"  [(ngModel)]="userData.City"><br><br>
+                                Zip Code : <input type="text" name="Zipcode"  [(ngModel)]="userData.Zipcode"><br><br>
+                            </div><br>
+                    </div>
+                    
+                    <button type="submit" class="button"><i class="fi fi-rr-disk"></i></button>
+                    <button type="button" class="button" (click)="delete()"><i class="fi fi-rr-trash"></i></button>
+                
+            </form>
+            
+</div><br>

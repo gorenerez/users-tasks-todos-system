@@ -1,0 +1,12 @@
+body {
+    background: #FFEF82;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input[type=text] {
+    border-radius: 8px;
+}

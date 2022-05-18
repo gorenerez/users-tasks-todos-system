@@ -1,0 +1,37 @@
+.leftDiv {
+  width:50%;
+  float: left;
+
+}
+
+.rightDiv {
+  width: 50%;
+  float: left;
+}
+
+.button {
+  background-color: #31333110;
+  border: none;
+  color: rgb(133, 51, 51);
+  padding: 6px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.button:hover {
+  background-color: #181a18;
+  color: white;
+}
+
+.header {
+  text-shadow: 2px 2px 2px #82954B, 0 0 25px #82954B, 0 0 5px darkblue;
+}
+
+h1 {
+  text-align: center;
+}
